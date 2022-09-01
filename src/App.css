@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.form{
+  width: 40rem;
+  height: 50rem;
+  margin-top: 15rem;
+  margin-left: 20rem;
+  box-shadow: 3px 3px 100px black;
+  border-radius: 30px;
+  padding: 50px;
+}
+.pborder{
+  border: 1px solid red;
+}
+.book{
+  text-decoration: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

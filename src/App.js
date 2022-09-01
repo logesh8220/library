@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import './Navbar.js'
+import './styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from './Navbar.js';
+import Sidebar from './Sidebar';
+import Validation from './Validation';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Products from './Products';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+<div class="sb-nav-fixed">
+    <Navbar></Navbar>
+    <div id="layoutSidenav">
+    <Sidebar></Sidebar>
+    
+    <Routes>
+      <Route path='/' element={<Validation/>}></Route>
+      <Route path='/Validation' element={<Validation/>}></Route>
+      <Route path='/Products' element={<Products/>}></Route>
+    </Routes>
     </div>
+  </div>
+  </BrowserRouter>
   );
 }
 
